@@ -1,0 +1,27 @@
+.page-wrap {
+  background-color: #D8EBFF;
+  height: 100vh;
+}
+
+.page-wrap .header-wrap h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: 900;
+}
+.page-wrap .form-wrap {
+  background-color: rgba(130, 193, 255, .2);
+  border: 2px solid #87C3FF;
+}
+
+.page-wrap .form-wrap .form {
+  background-color: #eee;
+  border: 1px solid #F7F7F7;
+}
+
+.page-wrap .form-wrap .form .form-group .form-control:focus {
+  box-shadow: none;
+}
+
+.page-wrap .form-wrap .form .btn-wrap .btn {
+  border-radius: 0;
+}

@@ -17,12 +17,13 @@ mustacheExpressInstance.cache = null;
 
 app.engine('mustache', mustacheExpressInstance);
 app.set('view engine', 'mustache');
-app.set('views', __dirname + '/views');
+// app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/views'));
 
 // EXAMPLE ROUTING
 
 app.get('/', (req, res) => {
-  res.send('Hello World!!!');
+  res.render('index', {});
 });
 
 app.post
