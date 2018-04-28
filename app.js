@@ -26,6 +26,8 @@ app.get('/', (req, res) => {
   res.render('index', {});
 });
 
-app.post
+app.post('/todos', (req, res) => {
+  res.json(req.body);
+});
 
 app.listen(3000, () => console.log('Listening on port 3000'));
