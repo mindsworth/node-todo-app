@@ -4,6 +4,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mustacheExpress = require('mustache-express');
 const mongoose = require('mongoose');
+const routes = require('./routes/routes.js');
+
+mongoose.connect('mongodb://localhost:27017/todo-db', {
+  useMongoClient: true
+}).then(() => {
+  console.log('Database connected.');
+});
 
 // INTIALIZING EXPRESS
 
@@ -22,10 +29,6 @@ app.use(express.static(__dirname + '/views'));
 
 // EXAMPLE ROUTING
 
-app.get('/', (req, res) => {
-  res.render('index', {});
-});
-
-app.post
+app.use('/', routes);
 
 app.listen(3000, () => console.log('Listening on port 3000'));
